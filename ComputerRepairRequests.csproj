@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A42F5FC-667C-40B5-96C3-96C4A73F0DCA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ComputerRepairRequests</RootNamespace>
+    <AssemblyName>ComputerRepairRequests</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.29921.15, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DG.AdvancedDataGridView.1.2.29921.15\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvaregeCompletionTime.cs" />
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCommentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCommentsForm.Designer.cs">
+      <DependentUpon>CreateCommentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClientRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClientRequestForm.Designer.cs">
+      <DependentUpon>EditClientRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTechnicianRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTechnicianRequestForm.Designer.cs">
+      <DependentUpon>EditTechnicianRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorForm.Designer.cs">
+      <DependentUpon>OperatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QrCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QrCodeForm.Designer.cs">
+      <DependentUpon>QrCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationOperatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationOperatorForm.Designer.cs">
+      <DependentUpon>RegistrationOperatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechnicianForm.Designer.cs">
+      <DependentUpon>TechnicianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCommentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCommentsForm.Designer.cs">
+      <DependentUpon>ViewCommentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="СreateClientRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="СreateClientRequestForm.Designer.cs">
+      <DependentUpon>СreateClientRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginHistoryForm.Designer.cs">
+      <DependentUpon>LoginHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCommentsForm.resx">
+      <DependentUpon>CreateCommentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClientRequestForm.resx">
+      <DependentUpon>EditClientRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTechnicianRequestForm.resx">
+      <DependentUpon>EditTechnicianRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginHistoryForm.resx">
+      <DependentUpon>LoginHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperatorForm.resx">
+      <DependentUpon>OperatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QrCodeForm.resx">
+      <DependentUpon>QrCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationOperatorForm.resx">
+      <DependentUpon>RegistrationOperatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechnicianForm.resx">
+      <DependentUpon>TechnicianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCommentsForm.resx">
+      <DependentUpon>ViewCommentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="СreateClientRequestForm.resx">
+      <DependentUpon>СreateClientRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\showHide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showAndHide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloadProcess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
